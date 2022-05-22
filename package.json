@@ -3,20 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "electron": "^18.2.3",
-    "electron-packager": "^15.5.1",
-    "eslint": "^7.32.0",
-    "typescript": "^4.5.5"
-  },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc",
+    "watch": "npm run clean && tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "npm run build && electron .",
-    "packager": "npm run build && electron-packager . --out=./packages"
+    "packager": "npm run build && electron-packager . --out=./builds"
   },
   "repository": {
     "type": "git",
@@ -27,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/Konijima/electron-typescript/issues"
   },
-  "homepage": "https://github.com/Konijima/electron-typescript#readme"
+  "homepage": "https://github.com/Konijima/electron-typescript#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "electron": "^18.2.3",
+    "electron-packager": "^15.5.1",
+    "eslint": "^7.32.0",
+    "typescript": "^4.5.5",
+    "rimraf": "^3.0.2"
+  }
 }

@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from "electron";
-import * as path from "path";
+import { join } from "path";
 
 function createWindow() {
   // Create the browser window.
@@ -7,12 +7,14 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      preload: join(__dirname, "preload.js"),
     },
   });
 
+  const indexPath = join(__dirname, "../index.html")
+
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../index.html"));
+  mainWindow.loadFile(indexPath); 
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

@@ -6,9 +6,9 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "npm run clean && tsc",
-    "watch": "npm run clean && tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron .",
+    "watch": "tsc -w",
+    "start": "electron .",
     "packager": "npm run build && electron-packager . --out=./builds"
   },
   "repository": {
@@ -29,7 +29,7 @@
     "electron": "^18.2.3",
     "electron-packager": "^15.5.1",
     "eslint": "^7.32.0",
-    "typescript": "^4.5.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
   }
 }

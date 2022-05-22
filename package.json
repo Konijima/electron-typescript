@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Konijima/electron-typescript#readme",
   "dependencies": {
+    "electron-dialog-manager": "^1.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.25.0",

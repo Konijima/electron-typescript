@@ -2,11 +2,16 @@
 // It has the same sandbox as a Chrome extension.
 
 import { contextBridge } from 'electron'
-import * as SampleAPI from './api/SampleAPI'
 
 // Expose custom APIs
+
+import * as SampleAPI from './api/SampleAPI'
 contextBridge.exposeInMainWorld('SampleAPI', SampleAPI)
 
+import { DialogManagerRenderer } from 'electron-dialog-manager'
+contextBridge.exposeInMainWorld('DialogManager', DialogManagerRenderer)
+
+// Dom is ready
 window.addEventListener("DOMContentLoaded", () => {
     const replaceText = (selector: string, text: string) => {
         const element = document.getElementById(selector);

@@ -5,5 +5,6 @@
 // Use preload.js to selectively enable features
 // needed in the renderer process.
 
+// Check exposed API in renderer process
 console.log(SampleAPI)
-SampleAPI.hello()
+console.log(DialogManager)

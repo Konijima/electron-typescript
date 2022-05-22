@@ -1,7 +1,7 @@
 {
   "name": "electron-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal Electron application written with Typescript",
   "main": "dist/main.js",
   "scripts": {
     "clean": "rimraf ./dist",
@@ -15,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/Konijima/electron-typescript.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "GitHub",
+  "license": "CC0 1.0",
   "bugs": {
     "url": "https://github.com/Konijima/electron-typescript/issues"
   },

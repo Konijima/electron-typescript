@@ -11,6 +11,7 @@
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "src/api/index.d.ts"
   ]
 }

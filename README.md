@@ -25,9 +25,11 @@ git clone https://github.com/Konijima/electron-typescript
 cd electron-typescript
 # Install dependencies
 npm install
+# Build the app
+npm run build
 # Run the app
 npm start
-# Create a build
+# Create a build package
 npm run packager
 ```
 

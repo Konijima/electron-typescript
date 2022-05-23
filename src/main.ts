@@ -1,6 +1,6 @@
 import { app, BrowserWindow } from "electron";
 import { join } from "path";
-import { DialogManagerMain } from 'electron-dialog-manager'
+import { ElectronDialogManagerMain } from 'electron-dialog-manager'
 
 function createWindow() {
   // Create the browser window.
@@ -47,4 +47,4 @@ app.on("window-all-closed", () => {
 // code. You can also put them in separate files and require them here.
 
 // Initialize the dialog manager module
-DialogManagerMain()
+ElectronDialogManagerMain.set()
